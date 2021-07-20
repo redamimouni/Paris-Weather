@@ -12,8 +12,18 @@
 		AA47AE2C269EC3AC00D3129E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA47AE2A269EC3AC00D3129E /* Main.storyboard */; };
 		AA47AE2E269EC3AF00D3129E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA47AE2D269EC3AF00D3129E /* Assets.xcassets */; };
 		AA47AE31269EC3AF00D3129E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA47AE2F269EC3AF00D3129E /* LaunchScreen.storyboard */; };
-		AA47AE3C269EC3AF00D3129E /* ParisWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE3B269EC3AF00D3129E /* ParisWeatherTests.swift */; };
 		AA47AE47269EC3AF00D3129E /* ParisWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE46269EC3AF00D3129E /* ParisWeatherUITests.swift */; };
+		AA47AE62269EC82B00D3129E /* DailyForeCastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE61269EC82B00D3129E /* DailyForeCastEntity.swift */; };
+		AA47AE69269EC90B00D3129E /* DailyForeCastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE68269EC90B00D3129E /* DailyForeCastService.swift */; };
+		AA47AE6F269ED7C500D3129E /* DailyForeCastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE6E269ED7C500D3129E /* DailyForeCastRepository.swift */; };
+		AA47AE7A269EDBD100D3129E /* DailyForeCastRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE79269EDBD100D3129E /* DailyForeCastRepositoryTest.swift */; };
+		AA47AE8B269EDD1000D3129E /* dailyForeCastResponseSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = AA47AE8A269EDD1000D3129E /* dailyForeCastResponseSuccess.json */; };
+		AA47AE95269EDE6B00D3129E /* DailyForeCastServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE94269EDE6B00D3129E /* DailyForeCastServiceMock.swift */; };
+		AA47AEA5269EE15E00D3129E /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AEA0269EDFD300D3129E /* TestUtils.swift */; };
+		AA47AED3269EE79D00D3129E /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AEA0269EDFD300D3129E /* TestUtils.swift */; };
+		AA47AEEA26A71C4A00D3129E /* dailyForeCastResponseSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = AA47AE8A269EDD1000D3129E /* dailyForeCastResponseSuccess.json */; };
+		AA47AEEF26A7228800D3129E /* dailyForeCastResponseFailure.json in Resources */ = {isa = PBXBuildFile; fileRef = AA47AEEE26A7228800D3129E /* dailyForeCastResponseFailure.json */; };
+		AA47AEF626A7228D00D3129E /* dailyForeCastResponseFailure.json in Resources */ = {isa = PBXBuildFile; fileRef = AA47AEEE26A7228800D3129E /* dailyForeCastResponseFailure.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +52,18 @@
 		AA47AE30269EC3AF00D3129E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA47AE32269EC3AF00D3129E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA47AE37269EC3AF00D3129E /* ParisWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParisWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA47AE3B269EC3AF00D3129E /* ParisWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisWeatherTests.swift; sourceTree = "<group>"; };
 		AA47AE3D269EC3AF00D3129E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA47AE42269EC3AF00D3129E /* ParisWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParisWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA47AE46269EC3AF00D3129E /* ParisWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisWeatherUITests.swift; sourceTree = "<group>"; };
 		AA47AE48269EC3AF00D3129E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA47AE61269EC82B00D3129E /* DailyForeCastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastEntity.swift; sourceTree = "<group>"; };
+		AA47AE68269EC90B00D3129E /* DailyForeCastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastService.swift; sourceTree = "<group>"; };
+		AA47AE6E269ED7C500D3129E /* DailyForeCastRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastRepository.swift; sourceTree = "<group>"; };
+		AA47AE79269EDBD100D3129E /* DailyForeCastRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastRepositoryTest.swift; sourceTree = "<group>"; };
+		AA47AE8A269EDD1000D3129E /* dailyForeCastResponseSuccess.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dailyForeCastResponseSuccess.json; sourceTree = "<group>"; };
+		AA47AE94269EDE6B00D3129E /* DailyForeCastServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastServiceMock.swift; sourceTree = "<group>"; };
+		AA47AEA0269EDFD300D3129E /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
+		AA47AEEE26A7228800D3129E /* dailyForeCastResponseFailure.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dailyForeCastResponseFailure.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +118,8 @@
 				AA47AE28269EC3AC00D3129E /* ViewController.swift */,
 				AA47AE2A269EC3AC00D3129E /* Main.storyboard */,
 				AA47AE2D269EC3AF00D3129E /* Assets.xcassets */,
+				AA47AE6D269ED7A500D3129E /* Repository */,
+				AA47AE60269EC7D000D3129E /* Services */,
 				AA47AE2F269EC3AF00D3129E /* LaunchScreen.storyboard */,
 				AA47AE32269EC3AF00D3129E /* Info.plist */,
 			);
@@ -110,8 +129,11 @@
 		AA47AE3A269EC3AF00D3129E /* ParisWeatherTests */ = {
 			isa = PBXGroup;
 			children = (
-				AA47AE3B269EC3AF00D3129E /* ParisWeatherTests.swift */,
+				AA47AE93269EDDC800D3129E /* Mock */,
+				AA47AE92269EDD1B00D3129E /* Json */,
+				AA47AE79269EDBD100D3129E /* DailyForeCastRepositoryTest.swift */,
 				AA47AE3D269EC3AF00D3129E /* Info.plist */,
+				AA47AEA0269EDFD300D3129E /* TestUtils.swift */,
 			);
 			path = ParisWeatherTests;
 			sourceTree = "<group>";
@@ -123,6 +145,48 @@
 				AA47AE48269EC3AF00D3129E /* Info.plist */,
 			);
 			path = ParisWeatherUITests;
+			sourceTree = "<group>";
+		};
+		AA47AE60269EC7D000D3129E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AA47AE66269EC8E700D3129E /* Models */,
+				AA47AE68269EC90B00D3129E /* DailyForeCastService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AA47AE66269EC8E700D3129E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA47AE61269EC82B00D3129E /* DailyForeCastEntity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA47AE6D269ED7A500D3129E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				AA47AE6E269ED7C500D3129E /* DailyForeCastRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		AA47AE92269EDD1B00D3129E /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				AA47AEEE26A7228800D3129E /* dailyForeCastResponseFailure.json */,
+				AA47AE8A269EDD1000D3129E /* dailyForeCastResponseSuccess.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		AA47AE93269EDDC800D3129E /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				AA47AE94269EDE6B00D3129E /* DailyForeCastServiceMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +295,8 @@
 				AA47AE31269EC3AF00D3129E /* LaunchScreen.storyboard in Resources */,
 				AA47AE2E269EC3AF00D3129E /* Assets.xcassets in Resources */,
 				AA47AE2C269EC3AC00D3129E /* Main.storyboard in Resources */,
+				AA47AEEA26A71C4A00D3129E /* dailyForeCastResponseSuccess.json in Resources */,
+				AA47AEF626A7228D00D3129E /* dailyForeCastResponseFailure.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +304,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA47AE8B269EDD1000D3129E /* dailyForeCastResponseSuccess.json in Resources */,
+				AA47AEEF26A7228800D3129E /* dailyForeCastResponseFailure.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +323,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA47AE69269EC90B00D3129E /* DailyForeCastService.swift in Sources */,
+				AA47AE62269EC82B00D3129E /* DailyForeCastEntity.swift in Sources */,
 				AA47AE29269EC3AC00D3129E /* ViewController.swift in Sources */,
 				AA47AE25269EC3AC00D3129E /* AppDelegate.swift in Sources */,
+				AA47AEA5269EE15E00D3129E /* TestUtils.swift in Sources */,
+				AA47AE6F269ED7C500D3129E /* DailyForeCastRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +336,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA47AE3C269EC3AF00D3129E /* ParisWeatherTests.swift in Sources */,
+				AA47AE95269EDE6B00D3129E /* DailyForeCastServiceMock.swift in Sources */,
+				AA47AE7A269EDBD100D3129E /* DailyForeCastRepositoryTest.swift in Sources */,
+				AA47AED3269EE79D00D3129E /* TestUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -417,7 +491,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -472,7 +546,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ParisWeatherTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,7 +567,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ParisWeatherTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
