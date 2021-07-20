@@ -81,6 +81,12 @@ struct List: Codable, Equatable {
         case feelsLike = "feels_like"
         case pressure, humidity, weather, speed, deg, gust, clouds, pop, rain
     }
+    
+    func toForecastListModel() -> ForecastListModel {
+        return ForecastListModel(temperature: String(format: "%.0f", temp.day),
+                                 day: dt.timeIntervalChangeToTimeStr(dateFormat: "yyyy-MM-dd HH:mm:ss")
+        )
+    }
 }
 
 // MARK: - FeelsLike

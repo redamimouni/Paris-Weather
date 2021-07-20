@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA47AE25269EC3AC00D3129E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE24269EC3AC00D3129E /* AppDelegate.swift */; };
-		AA47AE29269EC3AC00D3129E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE28269EC3AC00D3129E /* ViewController.swift */; };
+		AA47AE29269EC3AC00D3129E /* ForecastListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE28269EC3AC00D3129E /* ForecastListViewController.swift */; };
 		AA47AE2C269EC3AC00D3129E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA47AE2A269EC3AC00D3129E /* Main.storyboard */; };
 		AA47AE2E269EC3AF00D3129E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA47AE2D269EC3AF00D3129E /* Assets.xcassets */; };
 		AA47AE31269EC3AF00D3129E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA47AE2F269EC3AF00D3129E /* LaunchScreen.storyboard */; };
@@ -24,6 +24,8 @@
 		AA47AEEA26A71C4A00D3129E /* dailyForeCastResponseSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = AA47AE8A269EDD1000D3129E /* dailyForeCastResponseSuccess.json */; };
 		AA47AEEF26A7228800D3129E /* dailyForeCastResponseFailure.json in Resources */ = {isa = PBXBuildFile; fileRef = AA47AEEE26A7228800D3129E /* dailyForeCastResponseFailure.json */; };
 		AA47AEF626A7228D00D3129E /* dailyForeCastResponseFailure.json in Resources */ = {isa = PBXBuildFile; fileRef = AA47AEEE26A7228800D3129E /* dailyForeCastResponseFailure.json */; };
+		AA47AEFF26A72DF400D3129E /* ForecastListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AEFE26A72DF400D3129E /* ForecastListViewModel.swift */; };
+		AA47AF0A26A7386800D3129E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF0926A7386800D3129E /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +48,7 @@
 /* Begin PBXFileReference section */
 		AA47AE21269EC3AC00D3129E /* ParisWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParisWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA47AE24269EC3AC00D3129E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AA47AE28269EC3AC00D3129E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AA47AE28269EC3AC00D3129E /* ForecastListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewController.swift; sourceTree = "<group>"; };
 		AA47AE2B269EC3AC00D3129E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA47AE2D269EC3AF00D3129E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA47AE30269EC3AF00D3129E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +66,8 @@
 		AA47AE94269EDE6B00D3129E /* DailyForeCastServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastServiceMock.swift; sourceTree = "<group>"; };
 		AA47AEA0269EDFD300D3129E /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		AA47AEEE26A7228800D3129E /* dailyForeCastResponseFailure.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dailyForeCastResponseFailure.json; sourceTree = "<group>"; };
+		AA47AEFE26A72DF400D3129E /* ForecastListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewModel.swift; sourceTree = "<group>"; };
+		AA47AF0926A7386800D3129E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +119,15 @@
 			isa = PBXGroup;
 			children = (
 				AA47AE24269EC3AC00D3129E /* AppDelegate.swift */,
-				AA47AE28269EC3AC00D3129E /* ViewController.swift */,
-				AA47AE2A269EC3AC00D3129E /* Main.storyboard */,
-				AA47AE2D269EC3AF00D3129E /* Assets.xcassets */,
+				AA47AE28269EC3AC00D3129E /* ForecastListViewController.swift */,
+				AA47AEFD26A72CBD00D3129E /* ViewModels */,
 				AA47AE6D269ED7A500D3129E /* Repository */,
 				AA47AE60269EC7D000D3129E /* Services */,
+				AA47AE2A269EC3AC00D3129E /* Main.storyboard */,
 				AA47AE2F269EC3AF00D3129E /* LaunchScreen.storyboard */,
 				AA47AE32269EC3AF00D3129E /* Info.plist */,
+				AA47AE2D269EC3AF00D3129E /* Assets.xcassets */,
+				AA47AF0926A7386800D3129E /* Utils.swift */,
 			);
 			path = ParisWeather;
 			sourceTree = "<group>";
@@ -187,6 +193,14 @@
 				AA47AE94269EDE6B00D3129E /* DailyForeCastServiceMock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		AA47AEFD26A72CBD00D3129E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AA47AEFE26A72DF400D3129E /* ForecastListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,11 +338,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA47AE69269EC90B00D3129E /* DailyForeCastService.swift in Sources */,
+				AA47AEFF26A72DF400D3129E /* ForecastListViewModel.swift in Sources */,
 				AA47AE62269EC82B00D3129E /* DailyForeCastEntity.swift in Sources */,
-				AA47AE29269EC3AC00D3129E /* ViewController.swift in Sources */,
+				AA47AE29269EC3AC00D3129E /* ForecastListViewController.swift in Sources */,
 				AA47AE25269EC3AC00D3129E /* AppDelegate.swift in Sources */,
 				AA47AEA5269EE15E00D3129E /* TestUtils.swift in Sources */,
 				AA47AE6F269ED7C500D3129E /* DailyForeCastRepository.swift in Sources */,
+				AA47AF0A26A7386800D3129E /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
