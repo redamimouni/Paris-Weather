@@ -84,7 +84,7 @@ struct List: Codable, Equatable {
     
     func toForecastListModel() -> ForecastListModel {
         return ForecastListModel(temperature: String(format: "%.0f", temp.day),
-                                 day: dt.timeIntervalChangeToTimeStr(dateFormat: "yyyy-MM-dd HH:mm:ss")
+                                 day: dt.timeIntervalChangeToTimeStr(dateFormat: "EEEE")
         )
     }
 }

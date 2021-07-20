@@ -11,8 +11,8 @@ extension Int {
     
     func timeIntervalChangeToTimeStr(dateFormat:String?) -> String {
         let timeInterval = TimeInterval(self)
-        let date = NSDate.init(timeIntervalSince1970: timeInterval/1000)
-        let formatter = DateFormatter.init()
+        let date = NSDate(timeIntervalSince1970: timeInterval)
+        let formatter = DateFormatter()
         if dateFormat == nil {
             formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         } else {
