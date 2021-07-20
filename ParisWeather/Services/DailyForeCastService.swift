@@ -29,7 +29,7 @@ class DailyForeCastServiceImpl: DailyForeCastServiceProtocol {
     }
     
     func getDailyForeCast(completionHandler: @escaping (Result<Data, Error>) -> Void) {
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: request, cachedResponseOnError: true) { (data, response, error) in
             if let error = error {
                 completionHandler(.failure(error))
             }
@@ -40,6 +40,7 @@ class DailyForeCastServiceImpl: DailyForeCastServiceProtocol {
                 completionHandler(.success(data))
             }
         }
+        
         task.resume()
     }
 }

@@ -163,18 +163,18 @@
 		AA47AE60269EC7D000D3129E /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				AA47AE66269EC8E700D3129E /* Models */,
+				AA47AE66269EC8E700D3129E /* Entities */,
 				AA47AE68269EC90B00D3129E /* DailyForeCastService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		AA47AE66269EC8E700D3129E /* Models */ = {
+		AA47AE66269EC8E700D3129E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				AA47AE61269EC82B00D3129E /* DailyForeCastEntity.swift */,
 			);
-			path = Models;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		AA47AE6D269ED7A500D3129E /* Repository */ = {
