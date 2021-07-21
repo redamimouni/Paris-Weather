@@ -11,11 +11,11 @@ class ForecastListViewModel: NSObject {
     
     private var repository: DailyForeCastRepositoryProtocol
     
-    private(set) var forecastData: [ForecastListModel]! {
-            didSet {
-                self.bindForecastListViewModelToController()
-            }
+    private(set) var forecastData: Result<[ForecastListModel], CustomError>? {
+        didSet {
+            self.bindForecastListViewModelToController()
         }
+    }
     
     var bindForecastListViewModelToController : (() -> ()) = {}
     
@@ -27,17 +27,17 @@ class ForecastListViewModel: NSObject {
         repository.getDailyForeCast { [weak self] result in
             switch result {
             case .success(let entity):
-                self?.forecastData = entity.list.map({ it in
+                self?.forecastData = .success(entity.list.map({ it in
                     it.toForecastListModel()
-                })
-            case .failure(_): break
-                
+                }))
+            case .failure(let error):
+                self?.forecastData = .failure(error)
             }
         }
     }
 }
 
-struct ForecastListModel {
+struct ForecastListModel: Equatable {
     let temperature: String
     let day: String
 }

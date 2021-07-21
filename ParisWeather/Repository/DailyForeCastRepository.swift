@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DailyForeCastRepositoryProtocol {
-    func getDailyForeCast(completionHandler: @escaping (Result<DailyForeCastEntity, Error>) -> Void)
+    func getDailyForeCast(completionHandler: @escaping (Result<DailyForeCastEntity, CustomError>) -> Void)
 }
 
 class DailyForeCastRepositoryImpl: DailyForeCastRepositoryProtocol {
@@ -19,7 +19,7 @@ class DailyForeCastRepositoryImpl: DailyForeCastRepositoryProtocol {
         self.service = service
     }
     
-    func getDailyForeCast(completionHandler: @escaping (Result<DailyForeCastEntity, Error>) -> Void) {
+    func getDailyForeCast(completionHandler: @escaping (Result<DailyForeCastEntity, CustomError>) -> Void) {
         service.getDailyForeCast { response in
             switch response {
             case .success(let data):
@@ -28,7 +28,7 @@ class DailyForeCastRepositoryImpl: DailyForeCastRepositoryProtocol {
                     completionHandler(.success(returnValue))
                 }
                 catch {
-                    completionHandler(.failure(error))
+                    completionHandler(.failure(.parsingError))
                     print("Error took place\(error.localizedDescription).")
                 }
             case .failure(let error):
@@ -36,7 +36,4 @@ class DailyForeCastRepositoryImpl: DailyForeCastRepositoryProtocol {
             }
         }
     }
-    
 }
-
-

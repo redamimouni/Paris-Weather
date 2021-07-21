@@ -32,14 +32,26 @@ class ForecastListViewController: UITableViewController {
     }
     
     private func updateDataSource() {
-        self.dataSource = ForecastTableViewDataSource(cellIdentifier: "ForecastTableViewCell", items: self.forecastListViewModel.forecastData, configureCell: { (cell, forecastModel) in
-            cell.dayLabel.text = forecastModel.day
-            cell.temperatureLabel.text = forecastModel.temperature
-        })
-        
-        dispatcher.main {
-            self.tableView.dataSource = self.dataSource
-            self.tableView.reloadData()
+        switch forecastListViewModel.forecastData {
+        case .success(let data):
+            self.dataSource = ForecastTableViewDataSource(cellIdentifier: "ForecastTableViewCell", items: data, configureCell: { (cell, forecastModel) in
+                cell.dayLabel.text = forecastModel.day
+                cell.temperatureLabel.text = forecastModel.temperature
+            })
+            
+            dispatcher.main {
+                self.tableView.dataSource = self.dataSource
+                self.tableView.reloadData()
+            }
+            
+        case .failure(let error):
+            let alert = UIAlertController(title: "Fetch error", message: error.localizedDescription, preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        case .none:
+            let alert = UIAlertController(title: "Unknow error", message: "Data may be nil", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
         }
     }
 }

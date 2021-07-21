@@ -18,10 +18,10 @@ class DailyForeCastServiceMock: DailyForeCastServiceProtocol {
         success = isSuccess
     }
     
-    func getDailyForeCast(completionHandler: @escaping (Result<Data, Error>) -> Void) {
+    func getDailyForeCast(completionHandler: @escaping (Result<Data, CustomError>) -> Void) {
         guard let data = TestUtils.readLocalFile(forName: fileName)
         else {
-            completionHandler(.failure(TestUtilsException.cantReadFileError))
+            completionHandler(.failure(.unknownError))
             return
         }
         completionHandler(.success(data))

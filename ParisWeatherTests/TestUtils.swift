@@ -20,7 +20,3 @@ class TestUtils: NSObject {
         return nil
     }
 }
-
-enum TestUtilsException: Error {
-    case cantReadFileError
-}

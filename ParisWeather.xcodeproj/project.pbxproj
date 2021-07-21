@@ -29,6 +29,9 @@
 		AA47AF1C26A73F5C00D3129E /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF1B26A73F5C00D3129E /* ForecastTableViewCell.swift */; };
 		AA47AF2126A73FF000D3129E /* ForecasttableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF2026A73FF000D3129E /* ForecasttableViewDataSource.swift */; };
 		AA47AF2B26A741B600D3129E /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF2A26A741B600D3129E /* Dispatcher.swift */; };
+		AA47AF3A26A8463400D3129E /* ForecastListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF3926A8463400D3129E /* ForecastListViewModelTest.swift */; };
+		AA47AF3F26A8466400D3129E /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF3E26A8466400D3129E /* Mocks.swift */; };
+		AA47AF4A26A84D4500D3129E /* DailyForecastRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF4926A84D4500D3129E /* DailyForecastRepositoryMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		AA47AF1B26A73F5C00D3129E /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 		AA47AF2026A73FF000D3129E /* ForecasttableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecasttableViewDataSource.swift; sourceTree = "<group>"; };
 		AA47AF2A26A741B600D3129E /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		AA47AF3926A8463400D3129E /* ForecastListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewModelTest.swift; sourceTree = "<group>"; };
+		AA47AF3E26A8466400D3129E /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		AA47AF4926A84D4500D3129E /* DailyForecastRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastRepositoryMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				AA47AE24269EC3AC00D3129E /* AppDelegate.swift */,
-				AA47AF2526A7401D00D3129E /* ViewCoontrollers */,
+				AA47AF2526A7401D00D3129E /* ViewControllers */,
 				AA47AF1A26A73F4800D3129E /* Views */,
 				AA47AEFD26A72CBD00D3129E /* ViewModels */,
 				AA47AE6D269ED7A500D3129E /* Repository */,
@@ -145,6 +151,7 @@
 				AA47AE93269EDDC800D3129E /* Mock */,
 				AA47AE92269EDD1B00D3129E /* Json */,
 				AA47AE79269EDBD100D3129E /* DailyForeCastRepositoryTest.swift */,
+				AA47AF3926A8463400D3129E /* ForecastListViewModelTest.swift */,
 				AA47AE3D269EC3AF00D3129E /* Info.plist */,
 				AA47AEA0269EDFD300D3129E /* TestUtils.swift */,
 			);
@@ -198,6 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				AA47AE94269EDE6B00D3129E /* DailyForeCastServiceMock.swift */,
+				AA47AF4926A84D4500D3129E /* DailyForecastRepositoryMock.swift */,
+				AA47AF3E26A8466400D3129E /* Mocks.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -219,12 +228,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		AA47AF2526A7401D00D3129E /* ViewCoontrollers */ = {
+		AA47AF2526A7401D00D3129E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				AA47AE28269EC3AC00D3129E /* ForecastListViewController.swift */,
 			);
-			path = ViewCoontrollers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		AA47AF2926A7418900D3129E /* Utilities */ = {
@@ -389,8 +398,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA47AE95269EDE6B00D3129E /* DailyForeCastServiceMock.swift in Sources */,
+				AA47AF3A26A8463400D3129E /* ForecastListViewModelTest.swift in Sources */,
+				AA47AF4A26A84D4500D3129E /* DailyForecastRepositoryMock.swift in Sources */,
 				AA47AE7A269EDBD100D3129E /* DailyForeCastRepositoryTest.swift in Sources */,
 				AA47AED3269EE79D00D3129E /* TestUtils.swift in Sources */,
+				AA47AF3F26A8466400D3129E /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DailyForeCastServiceProtocol {
-    func getDailyForeCast(completionHandler: @escaping (Result<Data, Error>) -> Void)
+    func getDailyForeCast(completionHandler: @escaping (Result<Data, CustomError>) -> Void)
 }
 
 class DailyForeCastServiceImpl: DailyForeCastServiceProtocol {
@@ -28,10 +28,10 @@ class DailyForeCastServiceImpl: DailyForeCastServiceProtocol {
         self.count = String(count)
     }
     
-    func getDailyForeCast(completionHandler: @escaping (Result<Data, Error>) -> Void) {
+    func getDailyForeCast(completionHandler: @escaping (Result<Data, CustomError>) -> Void) {
         let task = URLSession.shared.dataTask(with: request, cachedResponseOnError: true) { (data, response, error) in
             if let error = error {
-                completionHandler(.failure(error))
+                completionHandler(.failure(.serviceError(localizedString: error.localizedDescription)))
             }
             if let response = response as? HTTPURLResponse {
                 print("HTTP Status code: \(response.statusCode)")
@@ -43,4 +43,10 @@ class DailyForeCastServiceImpl: DailyForeCastServiceProtocol {
         
         task.resume()
     }
+}
+
+enum CustomError: Error, Equatable {
+    case serviceError(localizedString: String?)
+    case parsingError
+    case unknownError
 }
