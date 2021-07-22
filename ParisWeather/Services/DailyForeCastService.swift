@@ -48,5 +48,6 @@ class DailyForeCastServiceImpl: DailyForeCastServiceProtocol {
 enum CustomError: Error, Equatable {
     case serviceError(localizedString: String?)
     case parsingError
+    case dayNotFound
     case unknownError
 }

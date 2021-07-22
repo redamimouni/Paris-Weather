@@ -9,7 +9,7 @@ import Foundation
 
 class ForecastListViewModel: NSObject {
     
-    private var repository: DailyForeCastRepositoryProtocol
+    private let repository: DailyForeCastRepositoryProtocol
     
     private(set) var forecastData: Result<[ForecastListModel], CustomError>? {
         didSet {
@@ -38,6 +38,7 @@ class ForecastListViewModel: NSObject {
 }
 
 struct ForecastListModel: Equatable {
+    let timeStamp: Int
     let temperature: String
     let day: String
 }

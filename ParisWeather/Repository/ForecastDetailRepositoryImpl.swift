@@ -1,12 +1,21 @@
 //
-//  Mocks.swift
-//  ParisWeatherTests
+//  ForecastDetailRepository.swift
+//  ParisWeather
 //
-//  Created by reda.mimouni on 21/07/2021.
+//  Created by reda.mimouni on 22/07/2021.
 //
 
 import Foundation
-@testable import ParisWeather
+
+protocol ForecastDetailRepositoryProtocol {
+    func getForecastFor(day timeStamp: Int, completionHandler: @escaping (Result<DailyForeCastEntity, CustomError>) -> Void)
+}
+
+class ForecastDetailRepositoryImpl: ForecastDetailRepositoryProtocol {
+    func getForecastFor(day timeStamp: Int, completionHandler: @escaping (Result<DailyForeCastEntity, CustomError>) -> Void) {
+        completionHandler(.success(DailyForeCastEntity.mock))
+    }
+}
 
 extension DailyForeCastEntity {
     static let mock = DailyForeCastEntity(city: City(id: 2988507,
@@ -19,7 +28,7 @@ extension DailyForeCastEntity {
                                           cod: "200",
                                           message: 0.0592709,
                                           cnt: 16,
-                                          list: [List(dt: 1626260400,
+                                          list: [List(dt: 1627038000,
                                                       sunrise: 1626235323,
                                                       sunset: 1626292228,
                                                       temp: Temp(day: 18.8, min: 14.75, max: 21.24, night: 18.19, eve: 20.74, morn: 15.19),
@@ -35,8 +44,4 @@ extension DailyForeCastEntity {
                                                       rain: 5.96),
                                           ])
 
-}
-
-extension ForecastListModel {
-    static let mock = ForecastListModel(timeStamp: 1626260400, temperature: "19", day: "Wednesday")
 }

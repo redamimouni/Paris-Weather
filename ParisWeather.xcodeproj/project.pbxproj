@@ -32,6 +32,9 @@
 		AA47AF3A26A8463400D3129E /* ForecastListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF3926A8463400D3129E /* ForecastListViewModelTest.swift */; };
 		AA47AF3F26A8466400D3129E /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF3E26A8466400D3129E /* Mocks.swift */; };
 		AA47AF4A26A84D4500D3129E /* DailyForecastRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF4926A84D4500D3129E /* DailyForecastRepositoryMock.swift */; };
+		AA47AF5226AA045100D3129E /* ForecastDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF5126AA045100D3129E /* ForecastDetailViewController.swift */; };
+		AA47AF5726AA0AE500D3129E /* ForecastDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF5626AA0AE500D3129E /* ForecastDetailViewModel.swift */; };
+		AA47AF5C26AA0B1400D3129E /* ForecastDetailRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF5B26AA0B1400D3129E /* ForecastDetailRepositoryImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,9 @@
 		AA47AF3926A8463400D3129E /* ForecastListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewModelTest.swift; sourceTree = "<group>"; };
 		AA47AF3E26A8466400D3129E /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		AA47AF4926A84D4500D3129E /* DailyForecastRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastRepositoryMock.swift; sourceTree = "<group>"; };
+		AA47AF5126AA045100D3129E /* ForecastDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailViewController.swift; sourceTree = "<group>"; };
+		AA47AF5626AA0AE500D3129E /* ForecastDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailViewModel.swift; sourceTree = "<group>"; };
+		AA47AF5B26AA0B1400D3129E /* ForecastDetailRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailRepositoryImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				AA47AE6E269ED7C500D3129E /* DailyForeCastRepository.swift */,
+				AA47AF5B26AA0B1400D3129E /* ForecastDetailRepositoryImpl.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -215,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				AA47AEFE26A72DF400D3129E /* ForecastListViewModel.swift */,
+				AA47AF5626AA0AE500D3129E /* ForecastDetailViewModel.swift */,
 				AA47AF2026A73FF000D3129E /* ForecasttableViewDataSource.swift */,
 			);
 			path = ViewModels;
@@ -232,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				AA47AE28269EC3AC00D3129E /* ForecastListViewController.swift */,
+				AA47AF5126AA045100D3129E /* ForecastDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -379,12 +388,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA47AF5726AA0AE500D3129E /* ForecastDetailViewModel.swift in Sources */,
 				AA47AE69269EC90B00D3129E /* DailyForeCastService.swift in Sources */,
 				AA47AEFF26A72DF400D3129E /* ForecastListViewModel.swift in Sources */,
+				AA47AF5C26AA0B1400D3129E /* ForecastDetailRepositoryImpl.swift in Sources */,
 				AA47AE62269EC82B00D3129E /* DailyForeCastEntity.swift in Sources */,
 				AA47AF2126A73FF000D3129E /* ForecasttableViewDataSource.swift in Sources */,
 				AA47AE29269EC3AC00D3129E /* ForecastListViewController.swift in Sources */,
 				AA47AE25269EC3AC00D3129E /* AppDelegate.swift in Sources */,
+				AA47AF5226AA045100D3129E /* ForecastDetailViewController.swift in Sources */,
 				AA47AEA5269EE15E00D3129E /* TestUtils.swift in Sources */,
 				AA47AF2B26A741B600D3129E /* Dispatcher.swift in Sources */,
 				AA47AF1C26A73F5C00D3129E /* ForecastTableViewCell.swift in Sources */,

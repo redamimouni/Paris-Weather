@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,7 +55,52 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sot-O5-ltR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214" y="80"/>
+            <point key="canvasLocation" x="-1009" y="61"/>
+        </scene>
+        <!--Forecast Detail View Controller-->
+        <scene sceneID="KdP-5f-g7l">
+            <objects>
+                <viewController storyboardIdentifier="ForecastDetail" id="e24-hU-7yy" customClass="ForecastDetailViewController" customModule="ParisWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="92f-3H-kg7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JK1-DE-SDc">
+                                <rect key="frame" x="308" y="64" width="86" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="9hI-Uu-s29"/>
+                                    <constraint firstAttribute="height" constant="50" id="sbG-jR-vwC"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeViewController" destination="e24-hU-7yy" eventType="touchUpInside" id="2yh-1n-DYR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday will be a hot day 🔥 dont forget to drink water 🍺" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w5-VZ-5fi">
+                                <rect key="frame" x="20" y="146" width="374" height="46.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jgw-Ss-Ax0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5w5-VZ-5fi" firstAttribute="centerX" secondItem="92f-3H-kg7" secondAttribute="centerX" id="1uV-16-dlu"/>
+                            <constraint firstItem="5w5-VZ-5fi" firstAttribute="leading" secondItem="92f-3H-kg7" secondAttribute="leading" constant="20" id="CJx-8z-KWD"/>
+                            <constraint firstItem="5w5-VZ-5fi" firstAttribute="top" secondItem="jgw-Ss-Ax0" secondAttribute="top" constant="102" id="KVo-Z9-XPs"/>
+                            <constraint firstItem="JK1-DE-SDc" firstAttribute="top" secondItem="jgw-Ss-Ax0" secondAttribute="top" constant="20" id="mfQ-sL-aef"/>
+                            <constraint firstAttribute="trailing" secondItem="5w5-VZ-5fi" secondAttribute="trailing" constant="20" id="mmR-cH-Z9i"/>
+                            <constraint firstItem="jgw-Ss-Ax0" firstAttribute="trailing" secondItem="JK1-DE-SDc" secondAttribute="trailing" constant="20" id="pt3-7O-EqF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="headerMessageLabel" destination="5w5-VZ-5fi" id="rUq-5d-0BC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JCd-G5-NiN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-110.14492753623189" y="60.9375"/>
         </scene>
     </scenes>
     <resources>

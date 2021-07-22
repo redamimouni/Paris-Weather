@@ -16,15 +16,14 @@ class ForecastListViewController: UITableViewController {
     )
     private let dispatcher = DefaultDispatcher()
     private var dataSource : ForecastTableViewDataSource<ForecastTableViewCell, ForecastListModel>!
-    private var forecastListViewModel: ForecastListViewModel!
+    lazy var forecastListViewModel = ForecastListViewModel(repository: repository)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        callToViewModelForUIUpdate()
+        registerViewModel()
     }
 
-    private func callToViewModelForUIUpdate(){
-        forecastListViewModel =  ForecastListViewModel(repository: repository)
+    private func registerViewModel(){
         forecastListViewModel.bindForecastListViewModelToController = {
                 self.updateDataSource()
         }
@@ -45,14 +44,27 @@ class ForecastListViewController: UITableViewController {
             }
             
         case .failure(let error):
-            let alert = UIAlertController(title: "Fetch error", message: error.localizedDescription, preferredStyle: .actionSheet)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
+            displayAlert(with: "Fetch error", message: error.localizedDescription)
         case .none:
-            let alert = UIAlertController(title: "Unknow error", message: "Data may be nil", preferredStyle: .actionSheet)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
+            displayAlert(with: "Unknow error", message: "Data may be nil")
         }
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        do {
+            let selectedForcast = try forecastListViewModel.forecastData?.get()[indexPath.row]
+            let detailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ForecastDetail") as! ForecastDetailViewController
+            detailViewController.dayTimeStamp = selectedForcast?.timeStamp
+            present(detailViewController, animated: true, completion: nil)
+        } catch {
+            displayAlert(with: "Unavailable detail", message: "Cannot display day forecast")
+        }
+    }
+    
+    private func displayAlert(with title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 }
-
