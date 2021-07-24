@@ -10,25 +10,25 @@ import XCTest
 
 class ForecastListViewModelTest: XCTestCase {
     
-    func testgetForecastDataShouldReturnSuccessModel() {
+    func testgetForecastListShouldReturnSuccessModel() {
         // Given
         let repository = DailyForecastRepositoryMock(isSucess: true)
         let viewModel = ForecastListViewModel(repository: repository)
         
         // When
-        viewModel.getForecastData()
+        viewModel.getForecastList()
         
         // Then
         XCTAssertEqual(viewModel.forecastData, .success([ForecastListModel.mock]))
     }
     
-    func testgetForecastDataShouldReturnFailure() {
+    func testgetForecastListShouldReturnFailure() {
         // Given
         let repository = DailyForecastRepositoryMock(isSucess: false)
         let viewModel = ForecastListViewModel(repository: repository)
         
         // When
-        viewModel.getForecastData()
+        viewModel.getForecastList()
         
         // Then
         XCTAssertEqual(viewModel.forecastData, .failure(.parsingError))

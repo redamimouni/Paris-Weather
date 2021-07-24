@@ -40,3 +40,24 @@ extension DailyForeCastEntity {
 extension ForecastListModel {
     static let mock = ForecastListModel(timeStamp: 1626260400, temperature: "19", day: "Wednesday")
 }
+
+extension ForecastDetailModel {
+    static let mock = ForecastDetailModel(headerMessage: "Wednesday will be a Cold day ❄️ dont forget to eat your soup 🍵")
+}
+
+extension List {
+    static let mock = List(dt: 1626260400,
+                           sunrise: 1626235323,
+                           sunset: 1626292228,
+                           temp: Temp(day: 18.8, min: 14.75, max: 21.24, night: 18.19, eve: 20.74, morn: 15.19),
+                           feelsLike: FeelsLike(day: 18.67, night: 18.1, eve: 20.62, morn: 15.25),
+                           pressure: 1016,
+                           humidity: 74,
+                           weather: [Weather(id: 501, main: .rain, weatherDescription: "moderate rain", icon: "10d")],
+                           speed: 6.09,
+                           deg: 330,
+                           gust: 11.29,
+                           clouds: 98,
+                           pop: 0.86,
+                           rain: 5.96)
+}

@@ -8,10 +8,14 @@
 import Foundation
 
 protocol DailyForeCastRepositoryProtocol {
+    var entity: DailyForeCastEntity? { get }
+
     func getDailyForeCast(completionHandler: @escaping (Result<DailyForeCastEntity, CustomError>) -> Void)
+    func getForecastFor(day timeStamp: Int, completionHandler: @escaping (Result<List, CustomError>) -> Void)
 }
 
 class DailyForeCastRepositoryImpl: DailyForeCastRepositoryProtocol {
+    var entity: DailyForeCastEntity?
     
     private let service: DailyForeCastServiceProtocol
     
@@ -20,12 +24,13 @@ class DailyForeCastRepositoryImpl: DailyForeCastRepositoryProtocol {
     }
     
     func getDailyForeCast(completionHandler: @escaping (Result<DailyForeCastEntity, CustomError>) -> Void) {
-        service.getDailyForeCast { response in
+        service.getDailyForeCast { [weak self] response in
             switch response {
             case .success(let data):
                 do {
-                    let returnValue = try JSONDecoder().decode(DailyForeCastEntity.self, from: data)
-                    completionHandler(.success(returnValue))
+                    let jsonFromData = try JSONDecoder().decode(DailyForeCastEntity.self, from: data)
+                    self?.entity = jsonFromData
+                    completionHandler(.success(jsonFromData))
                 }
                 catch {
                     completionHandler(.failure(.parsingError))
@@ -35,5 +40,15 @@ class DailyForeCastRepositoryImpl: DailyForeCastRepositoryProtocol {
                 completionHandler(.failure(error))
             }
         }
+    }
+    
+    func getForecastFor(day timeStamp: Int, completionHandler: @escaping (Result<List, CustomError>) -> Void) {
+        guard let entity = self.entity?.list.first(where: {
+            $0.dt == timeStamp
+        }) else {
+            completionHandler(.failure(CustomError.dayNotFound))
+            return
+        }
+        completionHandler(.success(entity))
     }
 }

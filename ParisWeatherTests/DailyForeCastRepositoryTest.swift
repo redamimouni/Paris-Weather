@@ -10,10 +10,12 @@ import XCTest
 
 class DailyForeCastRepositoryTest: XCTestCase {
     private let expectedSuccessDailyForeCast = DailyForeCastEntity.mock
+    private let expectedSuccessForeCastForDay = List.mock
+    private let service = DailyForeCastServiceMock(isSuccess: true)
 
+    
     func testCallGetDailyForeCastShouldReturnSuccessEntity() {
         // Given
-        let service = DailyForeCastServiceMock(isSuccess: true)
         let repository = DailyForeCastRepositoryImpl(service: service)
         
         // When
@@ -45,5 +47,38 @@ class DailyForeCastRepositoryTest: XCTestCase {
         }
     }
 
+    func testCallGetForecastForDayShouldReturnSuccessEntity() {
+        // Given
+        let repository = DailyForeCastRepositoryImpl(service: service)
+        repository.entity = DailyForeCastEntity.mock
+        
+        // When
+        repository.getForecastFor(day: 1626260400) { result in
+            // Then
+            switch result {
+            case .success(let entity):
+                XCTAssertEqual(entity, self.expectedSuccessForeCastForDay)
+            case .failure(_):
+                XCTFail()
+            }
+        }
+    }
+    
+    func testCallGetForecastForDayShouldReturnDayNotFountError() {
+        // Given
+        let repository = DailyForeCastRepositoryImpl(service: service)
+        repository.entity = DailyForeCastEntity.mock
+
+        // When
+        repository.getForecastFor(day: 1626260401) { result in
+            // Then
+            switch result {
+            case .success(_):
+                XCTFail()
+            case .failure(let error):
+                XCTAssertEqual(error, .dayNotFound)
+            }
+        }
+    }
 }
 

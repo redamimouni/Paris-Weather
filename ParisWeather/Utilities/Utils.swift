@@ -9,16 +9,12 @@ import Foundation
 
 extension Int {
     
-    func timeIntervalChangeToTimeStr(dateFormat:String?) -> String {
+    func timeIntervalToDayOfWeek() -> String {
         let timeInterval = TimeInterval(self)
-        let date = NSDate(timeIntervalSince1970: timeInterval)
+        let date = Date(timeIntervalSince1970: timeInterval)
         let formatter = DateFormatter()
-        if dateFormat == nil {
-            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        } else {
-            formatter.dateFormat = dateFormat
-        }
-        return formatter.string(from: date as Date)
+        formatter.dateFormat = "EEEE"
+        return formatter.string(from: date)
     }
 }
 

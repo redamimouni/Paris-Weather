@@ -12,17 +12,20 @@ protocol DailyForeCastServiceProtocol {
 }
 
 class DailyForeCastServiceImpl: DailyForeCastServiceProtocol {
+    private let baseUrl: String
+
     private let appId: String
     private let city: String
     private let count: String
     lazy var request: URLRequest = {
-        let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast/daily?q=\(city)&mode=json&units=metric&cnt=\(count)&APPID=\(appId)")
+        let url = URL(string: "\(baseUrl)data/2.5/forecast/daily?q=\(city)&mode=json&units=metric&cnt=\(count)&APPID=\(appId)")
         var request = URLRequest(url: url!)
         request.httpMethod = "GET"
         return request
     }()
     
-    init(apiKey: String, cityName: String, count: Int) {
+    init(baseUrl: String, apiKey: String, cityName: String, count: Int) {
+        self.baseUrl = baseUrl
         self.appId = apiKey
         self.city = cityName
         self.count = String(count)

@@ -14,27 +14,27 @@
 		AA47AE31269EC3AF00D3129E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA47AE2F269EC3AF00D3129E /* LaunchScreen.storyboard */; };
 		AA47AE47269EC3AF00D3129E /* ParisWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE46269EC3AF00D3129E /* ParisWeatherUITests.swift */; };
 		AA47AE62269EC82B00D3129E /* DailyForeCastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE61269EC82B00D3129E /* DailyForeCastEntity.swift */; };
-		AA47AE69269EC90B00D3129E /* DailyForeCastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE68269EC90B00D3129E /* DailyForeCastService.swift */; };
-		AA47AE6F269ED7C500D3129E /* DailyForeCastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE6E269ED7C500D3129E /* DailyForeCastRepository.swift */; };
+		AA47AE69269EC90B00D3129E /* DailyForeCastServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE68269EC90B00D3129E /* DailyForeCastServiceImpl.swift */; };
+		AA47AE6F269ED7C500D3129E /* DailyForeCastRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE6E269ED7C500D3129E /* DailyForeCastRepositoryImpl.swift */; };
 		AA47AE7A269EDBD100D3129E /* DailyForeCastRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE79269EDBD100D3129E /* DailyForeCastRepositoryTest.swift */; };
 		AA47AE8B269EDD1000D3129E /* dailyForeCastResponseSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = AA47AE8A269EDD1000D3129E /* dailyForeCastResponseSuccess.json */; };
 		AA47AE95269EDE6B00D3129E /* DailyForeCastServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE94269EDE6B00D3129E /* DailyForeCastServiceMock.swift */; };
 		AA47AEA5269EE15E00D3129E /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AEA0269EDFD300D3129E /* TestUtils.swift */; };
 		AA47AED3269EE79D00D3129E /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AEA0269EDFD300D3129E /* TestUtils.swift */; };
 		AA47AEEA26A71C4A00D3129E /* dailyForeCastResponseSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = AA47AE8A269EDD1000D3129E /* dailyForeCastResponseSuccess.json */; };
-		AA47AEEF26A7228800D3129E /* dailyForeCastResponseFailure.json in Resources */ = {isa = PBXBuildFile; fileRef = AA47AEEE26A7228800D3129E /* dailyForeCastResponseFailure.json */; };
-		AA47AEF626A7228D00D3129E /* dailyForeCastResponseFailure.json in Resources */ = {isa = PBXBuildFile; fileRef = AA47AEEE26A7228800D3129E /* dailyForeCastResponseFailure.json */; };
+		AA47AEEF26A7228800D3129E /* dailyForeCastResponseContractError.json in Resources */ = {isa = PBXBuildFile; fileRef = AA47AEEE26A7228800D3129E /* dailyForeCastResponseContractError.json */; };
+		AA47AEF626A7228D00D3129E /* dailyForeCastResponseContractError.json in Resources */ = {isa = PBXBuildFile; fileRef = AA47AEEE26A7228800D3129E /* dailyForeCastResponseContractError.json */; };
 		AA47AEFF26A72DF400D3129E /* ForecastListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AEFE26A72DF400D3129E /* ForecastListViewModel.swift */; };
 		AA47AF0A26A7386800D3129E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF0926A7386800D3129E /* Utils.swift */; };
 		AA47AF1C26A73F5C00D3129E /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF1B26A73F5C00D3129E /* ForecastTableViewCell.swift */; };
-		AA47AF2126A73FF000D3129E /* ForecasttableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF2026A73FF000D3129E /* ForecasttableViewDataSource.swift */; };
+		AA47AF2126A73FF000D3129E /* ForecastTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF2026A73FF000D3129E /* ForecastTableViewDataSource.swift */; };
 		AA47AF2B26A741B600D3129E /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF2A26A741B600D3129E /* Dispatcher.swift */; };
 		AA47AF3A26A8463400D3129E /* ForecastListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF3926A8463400D3129E /* ForecastListViewModelTest.swift */; };
 		AA47AF3F26A8466400D3129E /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF3E26A8466400D3129E /* Mocks.swift */; };
 		AA47AF4A26A84D4500D3129E /* DailyForecastRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF4926A84D4500D3129E /* DailyForecastRepositoryMock.swift */; };
 		AA47AF5226AA045100D3129E /* ForecastDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF5126AA045100D3129E /* ForecastDetailViewController.swift */; };
 		AA47AF5726AA0AE500D3129E /* ForecastDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF5626AA0AE500D3129E /* ForecastDetailViewModel.swift */; };
-		AA47AF5C26AA0B1400D3129E /* ForecastDetailRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF5B26AA0B1400D3129E /* ForecastDetailRepositoryImpl.swift */; };
+		AA47AF6426AC487600D3129E /* ForecastDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF6326AC487600D3129E /* ForecastDetailViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,24 +68,24 @@
 		AA47AE46269EC3AF00D3129E /* ParisWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisWeatherUITests.swift; sourceTree = "<group>"; };
 		AA47AE48269EC3AF00D3129E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA47AE61269EC82B00D3129E /* DailyForeCastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastEntity.swift; sourceTree = "<group>"; };
-		AA47AE68269EC90B00D3129E /* DailyForeCastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastService.swift; sourceTree = "<group>"; };
-		AA47AE6E269ED7C500D3129E /* DailyForeCastRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastRepository.swift; sourceTree = "<group>"; };
+		AA47AE68269EC90B00D3129E /* DailyForeCastServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastServiceImpl.swift; sourceTree = "<group>"; };
+		AA47AE6E269ED7C500D3129E /* DailyForeCastRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastRepositoryImpl.swift; sourceTree = "<group>"; };
 		AA47AE79269EDBD100D3129E /* DailyForeCastRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastRepositoryTest.swift; sourceTree = "<group>"; };
 		AA47AE8A269EDD1000D3129E /* dailyForeCastResponseSuccess.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dailyForeCastResponseSuccess.json; sourceTree = "<group>"; };
 		AA47AE94269EDE6B00D3129E /* DailyForeCastServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastServiceMock.swift; sourceTree = "<group>"; };
 		AA47AEA0269EDFD300D3129E /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
-		AA47AEEE26A7228800D3129E /* dailyForeCastResponseFailure.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dailyForeCastResponseFailure.json; sourceTree = "<group>"; };
+		AA47AEEE26A7228800D3129E /* dailyForeCastResponseContractError.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dailyForeCastResponseContractError.json; sourceTree = "<group>"; };
 		AA47AEFE26A72DF400D3129E /* ForecastListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewModel.swift; sourceTree = "<group>"; };
 		AA47AF0926A7386800D3129E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		AA47AF1B26A73F5C00D3129E /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
-		AA47AF2026A73FF000D3129E /* ForecasttableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecasttableViewDataSource.swift; sourceTree = "<group>"; };
+		AA47AF2026A73FF000D3129E /* ForecastTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewDataSource.swift; sourceTree = "<group>"; };
 		AA47AF2A26A741B600D3129E /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		AA47AF3926A8463400D3129E /* ForecastListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewModelTest.swift; sourceTree = "<group>"; };
 		AA47AF3E26A8466400D3129E /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		AA47AF4926A84D4500D3129E /* DailyForecastRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastRepositoryMock.swift; sourceTree = "<group>"; };
 		AA47AF5126AA045100D3129E /* ForecastDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailViewController.swift; sourceTree = "<group>"; };
 		AA47AF5626AA0AE500D3129E /* ForecastDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailViewModel.swift; sourceTree = "<group>"; };
-		AA47AF5B26AA0B1400D3129E /* ForecastDetailRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailRepositoryImpl.swift; sourceTree = "<group>"; };
+		AA47AF6326AC487600D3129E /* ForecastDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +158,7 @@
 				AA47AE92269EDD1B00D3129E /* Json */,
 				AA47AE79269EDBD100D3129E /* DailyForeCastRepositoryTest.swift */,
 				AA47AF3926A8463400D3129E /* ForecastListViewModelTest.swift */,
+				AA47AF6326AC487600D3129E /* ForecastDetailViewModelTest.swift */,
 				AA47AE3D269EC3AF00D3129E /* Info.plist */,
 				AA47AEA0269EDFD300D3129E /* TestUtils.swift */,
 			);
@@ -177,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				AA47AE66269EC8E700D3129E /* Entities */,
-				AA47AE68269EC90B00D3129E /* DailyForeCastService.swift */,
+				AA47AE68269EC90B00D3129E /* DailyForeCastServiceImpl.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -193,8 +194,7 @@
 		AA47AE6D269ED7A500D3129E /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				AA47AE6E269ED7C500D3129E /* DailyForeCastRepository.swift */,
-				AA47AF5B26AA0B1400D3129E /* ForecastDetailRepositoryImpl.swift */,
+				AA47AE6E269ED7C500D3129E /* DailyForeCastRepositoryImpl.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 		AA47AE92269EDD1B00D3129E /* Json */ = {
 			isa = PBXGroup;
 			children = (
-				AA47AEEE26A7228800D3129E /* dailyForeCastResponseFailure.json */,
+				AA47AEEE26A7228800D3129E /* dailyForeCastResponseContractError.json */,
 				AA47AE8A269EDD1000D3129E /* dailyForeCastResponseSuccess.json */,
 			);
 			path = Json;
@@ -223,7 +223,7 @@
 			children = (
 				AA47AEFE26A72DF400D3129E /* ForecastListViewModel.swift */,
 				AA47AF5626AA0AE500D3129E /* ForecastDetailViewModel.swift */,
-				AA47AF2026A73FF000D3129E /* ForecasttableViewDataSource.swift */,
+				AA47AF2026A73FF000D3129E /* ForecastTableViewDataSource.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -361,7 +361,7 @@
 				AA47AE2E269EC3AF00D3129E /* Assets.xcassets in Resources */,
 				AA47AE2C269EC3AC00D3129E /* Main.storyboard in Resources */,
 				AA47AEEA26A71C4A00D3129E /* dailyForeCastResponseSuccess.json in Resources */,
-				AA47AEF626A7228D00D3129E /* dailyForeCastResponseFailure.json in Resources */,
+				AA47AEF626A7228D00D3129E /* dailyForeCastResponseContractError.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA47AE8B269EDD1000D3129E /* dailyForeCastResponseSuccess.json in Resources */,
-				AA47AEEF26A7228800D3129E /* dailyForeCastResponseFailure.json in Resources */,
+				AA47AEEF26A7228800D3129E /* dailyForeCastResponseContractError.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,18 +389,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA47AF5726AA0AE500D3129E /* ForecastDetailViewModel.swift in Sources */,
-				AA47AE69269EC90B00D3129E /* DailyForeCastService.swift in Sources */,
+				AA47AE69269EC90B00D3129E /* DailyForeCastServiceImpl.swift in Sources */,
 				AA47AEFF26A72DF400D3129E /* ForecastListViewModel.swift in Sources */,
-				AA47AF5C26AA0B1400D3129E /* ForecastDetailRepositoryImpl.swift in Sources */,
 				AA47AE62269EC82B00D3129E /* DailyForeCastEntity.swift in Sources */,
-				AA47AF2126A73FF000D3129E /* ForecasttableViewDataSource.swift in Sources */,
+				AA47AF2126A73FF000D3129E /* ForecastTableViewDataSource.swift in Sources */,
 				AA47AE29269EC3AC00D3129E /* ForecastListViewController.swift in Sources */,
 				AA47AE25269EC3AC00D3129E /* AppDelegate.swift in Sources */,
 				AA47AF5226AA045100D3129E /* ForecastDetailViewController.swift in Sources */,
 				AA47AEA5269EE15E00D3129E /* TestUtils.swift in Sources */,
 				AA47AF2B26A741B600D3129E /* Dispatcher.swift in Sources */,
 				AA47AF1C26A73F5C00D3129E /* ForecastTableViewCell.swift in Sources */,
-				AA47AE6F269ED7C500D3129E /* DailyForeCastRepository.swift in Sources */,
+				AA47AE6F269ED7C500D3129E /* DailyForeCastRepositoryImpl.swift in Sources */,
 				AA47AF0A26A7386800D3129E /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +410,7 @@
 			files = (
 				AA47AE95269EDE6B00D3129E /* DailyForeCastServiceMock.swift in Sources */,
 				AA47AF3A26A8463400D3129E /* ForecastListViewModelTest.swift in Sources */,
+				AA47AF6426AC487600D3129E /* ForecastDetailViewModelTest.swift in Sources */,
 				AA47AF4A26A84D4500D3129E /* DailyForecastRepositoryMock.swift in Sources */,
 				AA47AE7A269EDBD100D3129E /* DailyForeCastRepositoryTest.swift in Sources */,
 				AA47AED3269EE79D00D3129E /* TestUtils.swift in Sources */,

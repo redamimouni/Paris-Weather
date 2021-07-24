@@ -9,7 +9,7 @@ import Foundation
 
 class ForecastDetailViewModel: NSObject {
     
-    private let repository: ForecastDetailRepositoryProtocol
+    private let repository: DailyForeCastRepositoryProtocol
     
     private(set) var forecastDetailData: Result<ForecastDetailModel, CustomError>? {
         didSet {
@@ -17,7 +17,7 @@ class ForecastDetailViewModel: NSObject {
         }
     }
     
-    init(repository: ForecastDetailRepositoryProtocol) {
+    init(repository: DailyForeCastRepositoryProtocol) {
         self.repository = repository
     }
     
@@ -27,13 +27,7 @@ class ForecastDetailViewModel: NSObject {
         repository.getForecastFor(day: timeStamp) { [weak self] result in
             switch result {
             case .success(let entity):
-                guard let model = entity.list.first(where: {
-                    $0.dt == timeStamp
-                })?.toForeCastDetailModel() else {
-                    self?.forecastDetailData = .failure(CustomError.dayNotFound)
-                    return
-                }
-                self?.forecastDetailData = .success(model)
+                self?.forecastDetailData = .success(entity.toForeCastDetailModel())
             case .failure(let error):
                 self?.forecastDetailData = .failure(error)
             }
@@ -42,6 +36,12 @@ class ForecastDetailViewModel: NSObject {
     }
 }
 
-struct ForecastDetailModel {
+struct ForecastDetailModel: Equatable {
     let headerMessage: String
+}
+
+extension List {    
+    func toForeCastDetailModel() -> ForecastDetailModel {
+        return ForecastDetailModel(headerMessage: "\(dt.timeIntervalToDayOfWeek()) will be a \(temp.day > 25 ? "Hot day 🔥" : "Cold day ❄️") dont forget to \(temp.day > 25 ? "drink water 🍺" : "eat your soup 🍵")")
+    }
 }

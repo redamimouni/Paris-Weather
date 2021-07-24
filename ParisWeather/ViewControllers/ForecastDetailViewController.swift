@@ -12,7 +12,7 @@ class ForecastDetailViewController: UIViewController {
     @IBOutlet var headerMessageLabel: UILabel?
     
     var dayTimeStamp: Int!
-    private let repository = ForecastDetailRepositoryImpl()
+    var repository: DailyForeCastRepositoryProtocol!
     lazy var forecastDetailViewModel = ForecastDetailViewModel(repository: repository)
     
     override func viewDidLoad() {

@@ -10,9 +10,9 @@ import Foundation
 
 class DailyForeCastServiceMock: DailyForeCastServiceProtocol {
     lazy var fileName: String = {
-        return success ? "dailyForeCastResponseSuccess" : "dailyForeCastResponseFailure"
+        return success ? "dailyForeCastResponseSuccess" : "dailyForeCastResponseContractError"
     }()
-    let success: Bool
+    private let success: Bool
     
     init(isSuccess: Bool) {
         success = isSuccess

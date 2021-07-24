@@ -10,6 +10,7 @@ import UIKit
 class ForecastListViewController: UITableViewController {
 
     private let repository = DailyForeCastRepositoryImpl(service: DailyForeCastServiceImpl(
+                                                            baseUrl: "https://api.openweathermap.org/",
                                                             apiKey: "648a3aac37935e5b45e09727df728ac2",
                                                             cityName: "Paris",
                                                             count: 16)
@@ -27,7 +28,7 @@ class ForecastListViewController: UITableViewController {
         forecastListViewModel.bindForecastListViewModelToController = {
                 self.updateDataSource()
         }
-        forecastListViewModel.getForecastData()
+        forecastListViewModel.getForecastList()
     }
     
     private func updateDataSource() {
@@ -56,6 +57,7 @@ class ForecastListViewController: UITableViewController {
             let selectedForcast = try forecastListViewModel.forecastData?.get()[indexPath.row]
             let detailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ForecastDetail") as! ForecastDetailViewController
             detailViewController.dayTimeStamp = selectedForcast?.timeStamp
+            detailViewController.repository = repository // We can inject it with a better way using dependency injection framework like Swinject
             present(detailViewController, animated: true, completion: nil)
         } catch {
             displayAlert(with: "Unavailable detail", message: "Cannot display day forecast")

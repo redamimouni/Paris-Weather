@@ -23,7 +23,7 @@ class ForecastListViewModel: NSObject {
         self.repository = repository
     }
     
-    func getForecastData() {
+    func getForecastList() {
         repository.getDailyForeCast { [weak self] result in
             switch result {
             case .success(let entity):
@@ -41,4 +41,13 @@ struct ForecastListModel: Equatable {
     let timeStamp: Int
     let temperature: String
     let day: String
+}
+
+extension List {
+    func toForecastListModel() -> ForecastListModel {
+        return ForecastListModel(timeStamp: dt,
+                                 temperature: String(format: "%.0f", temp.day),
+                                 day: dt.timeIntervalToDayOfWeek()
+        )
+    }
 }
