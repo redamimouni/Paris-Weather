@@ -38,7 +38,10 @@ class ForecastDetailViewModel: NSObject {
 
 struct ForecastDetailModel: Equatable {
     static func == (lhs: ForecastDetailModel, rhs: ForecastDetailModel) -> Bool {
-        return lhs.sunriseSunset == rhs.sunriseSunset && lhs.temperature == rhs.temperature
+        return lhs.sunriseSunset == rhs.sunriseSunset
+            && lhs.temperature == rhs.temperature
+            && lhs.pressureHumidity == rhs.pressureHumidity
+            && lhs.weather == rhs.weather
     }
     
     let headerMessage: String
