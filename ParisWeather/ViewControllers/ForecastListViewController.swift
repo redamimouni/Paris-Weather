@@ -45,7 +45,12 @@ class ForecastListViewController: UITableViewController {
             }
             
         case .failure(let error):
-            displayAlert(with: "Fetch error", message: error.localizedDescription)
+            switch error {
+            case .serviceError(let message):
+                displayAlert(with: "Fetch error", message: message)
+            default:
+                displayAlert(with: "Fetch error", message: error.localizedDescription)
+            }
         case .none:
             displayAlert(with: "Unknow error", message: "Data may be nil")
         }

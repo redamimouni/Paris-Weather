@@ -42,7 +42,11 @@ extension ForecastListModel {
 }
 
 extension ForecastDetailModel {
-    static let mock = ForecastDetailModel(headerMessage: "Wednesday will be a Cold day ❄️ dont forget to eat your soup 🍵")
+    static let mock = ForecastDetailModel(headerMessage: "Wednesday will be a Cold day ❄️ dont forget to eat your soup 🍵",
+                                          sunriseSunset: (sunrise: "6:02 AM", sunset: "9:50 PM"),
+                                          temperature: (day: "18 C°", min: "14 C°", max: "21 C°"),
+                                          pressureHumidity: (pressure: "1016 hPa", humidity: "74 %"),
+                                          weather: (main: "Rain", icon: "10d"))
 }
 
 extension List {

@@ -13,7 +13,7 @@ class WeatherView: UIView {
     lazy var mainLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-        label.text = "Main waeather: \(weatherModel.main)"
+        label.text = "Main weather: \(weatherModel.main)"
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

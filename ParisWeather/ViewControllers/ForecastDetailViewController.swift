@@ -48,6 +48,7 @@ class ForecastDetailViewController: UIViewController {
     }
     
     private func buildViewsFromModel(model: ForecastDetailModel) -> [UIView] {
+        // We can make view creatioon better (using generics)
         let sunriseSunsetView = SunriseSunsetView(frame: .zero, model: model.sunriseSunset)
         let temperatureView = TemperatureView(frame: .zero, model: model.temperature)
         let pressureHumidityView = PressureHumidityView(frame: .zero, model: model.pressureHumidity)
