@@ -12,7 +12,6 @@
 		AA47AE2C269EC3AC00D3129E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA47AE2A269EC3AC00D3129E /* Main.storyboard */; };
 		AA47AE2E269EC3AF00D3129E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA47AE2D269EC3AF00D3129E /* Assets.xcassets */; };
 		AA47AE31269EC3AF00D3129E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA47AE2F269EC3AF00D3129E /* LaunchScreen.storyboard */; };
-		AA47AE47269EC3AF00D3129E /* ParisWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE46269EC3AF00D3129E /* ParisWeatherUITests.swift */; };
 		AA47AE62269EC82B00D3129E /* DailyForeCastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE61269EC82B00D3129E /* DailyForeCastEntity.swift */; };
 		AA47AE69269EC90B00D3129E /* DailyForeCastServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE68269EC90B00D3129E /* DailyForeCastServiceImpl.swift */; };
 		AA47AE6F269ED7C500D3129E /* DailyForeCastRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AE6E269ED7C500D3129E /* DailyForeCastRepositoryImpl.swift */; };
@@ -49,13 +48,6 @@
 			remoteGlobalIDString = AA47AE20269EC3AC00D3129E;
 			remoteInfo = ParisWeather;
 		};
-		AA47AE43269EC3AF00D3129E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA47AE19269EC3AC00D3129E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AA47AE20269EC3AC00D3129E;
-			remoteInfo = ParisWeather;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -68,9 +60,6 @@
 		AA47AE32269EC3AF00D3129E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA47AE37269EC3AF00D3129E /* ParisWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParisWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA47AE3D269EC3AF00D3129E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA47AE42269EC3AF00D3129E /* ParisWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParisWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA47AE46269EC3AF00D3129E /* ParisWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisWeatherUITests.swift; sourceTree = "<group>"; };
-		AA47AE48269EC3AF00D3129E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA47AE61269EC82B00D3129E /* DailyForeCastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastEntity.swift; sourceTree = "<group>"; };
 		AA47AE68269EC90B00D3129E /* DailyForeCastServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastServiceImpl.swift; sourceTree = "<group>"; };
 		AA47AE6E269ED7C500D3129E /* DailyForeCastRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForeCastRepositoryImpl.swift; sourceTree = "<group>"; };
@@ -111,13 +100,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA47AE3F269EC3AF00D3129E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -126,7 +108,6 @@
 			children = (
 				AA47AE23269EC3AC00D3129E /* ParisWeather */,
 				AA47AE3A269EC3AF00D3129E /* ParisWeatherTests */,
-				AA47AE45269EC3AF00D3129E /* ParisWeatherUITests */,
 				AA47AE22269EC3AC00D3129E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -136,7 +117,6 @@
 			children = (
 				AA47AE21269EC3AC00D3129E /* ParisWeather.app */,
 				AA47AE37269EC3AF00D3129E /* ParisWeatherTests.xctest */,
-				AA47AE42269EC3AF00D3129E /* ParisWeatherUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,15 +151,6 @@
 				AA47AEA0269EDFD300D3129E /* TestUtils.swift */,
 			);
 			path = ParisWeatherTests;
-			sourceTree = "<group>";
-		};
-		AA47AE45269EC3AF00D3129E /* ParisWeatherUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AA47AE46269EC3AF00D3129E /* ParisWeatherUITests.swift */,
-				AA47AE48269EC3AF00D3129E /* Info.plist */,
-			);
-			path = ParisWeatherUITests;
 			sourceTree = "<group>";
 		};
 		AA47AE60269EC7D000D3129E /* Services */ = {
@@ -304,24 +275,6 @@
 			productReference = AA47AE37269EC3AF00D3129E /* ParisWeatherTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AA47AE41269EC3AF00D3129E /* ParisWeatherUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AA47AE51269EC3AF00D3129E /* Build configuration list for PBXNativeTarget "ParisWeatherUITests" */;
-			buildPhases = (
-				AA47AE3E269EC3AF00D3129E /* Sources */,
-				AA47AE3F269EC3AF00D3129E /* Frameworks */,
-				AA47AE40269EC3AF00D3129E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AA47AE44269EC3AF00D3129E /* PBXTargetDependency */,
-			);
-			name = ParisWeatherUITests;
-			productName = ParisWeatherUITests;
-			productReference = AA47AE42269EC3AF00D3129E /* ParisWeatherUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -335,10 +288,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					AA47AE36269EC3AF00D3129E = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = AA47AE20269EC3AC00D3129E;
-					};
-					AA47AE41269EC3AF00D3129E = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = AA47AE20269EC3AC00D3129E;
 					};
@@ -359,7 +308,6 @@
 			targets = (
 				AA47AE20269EC3AC00D3129E /* ParisWeather */,
 				AA47AE36269EC3AF00D3129E /* ParisWeatherTests */,
-				AA47AE41269EC3AF00D3129E /* ParisWeatherUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -383,13 +331,6 @@
 			files = (
 				AA47AE8B269EDD1000D3129E /* dailyForeCastResponseSuccess.json in Resources */,
 				AA47AEEF26A7228800D3129E /* dailyForeCastResponseContractError.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AA47AE40269EC3AF00D3129E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,14 +375,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA47AE3E269EC3AF00D3129E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AA47AE47269EC3AF00D3129E /* ParisWeatherUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -449,11 +382,6 @@
 			isa = PBXTargetDependency;
 			target = AA47AE20269EC3AC00D3129E /* ParisWeather */;
 			targetProxy = AA47AE38269EC3AF00D3129E /* PBXContainerItemProxy */;
-		};
-		AA47AE44269EC3AF00D3129E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AA47AE20269EC3AC00D3129E /* ParisWeather */;
-			targetProxy = AA47AE43269EC3AF00D3129E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -673,44 +601,6 @@
 			};
 			name = Release;
 		};
-		AA47AE52269EC3AF00D3129E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ParisWeatherUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vc.ParisWeatherUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ParisWeather;
-			};
-			name = Debug;
-		};
-		AA47AE53269EC3AF00D3129E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ParisWeatherUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vc.ParisWeatherUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ParisWeather;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -737,15 +627,6 @@
 			buildConfigurations = (
 				AA47AE4F269EC3AF00D3129E /* Debug */,
 				AA47AE50269EC3AF00D3129E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AA47AE51269EC3AF00D3129E /* Build configuration list for PBXNativeTarget "ParisWeatherUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AA47AE52269EC3AF00D3129E /* Debug */,
-				AA47AE53269EC3AF00D3129E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
