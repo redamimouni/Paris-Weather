@@ -26,7 +26,7 @@ class ForecastListViewController: UITableViewController {
 
     private func registerViewModel(){
         forecastListViewModel.bindForecastListViewModelToController = {
-                self.updateDataSource()
+            self.updateDataSource()
         }
         forecastListViewModel.getForecastList()
     }
