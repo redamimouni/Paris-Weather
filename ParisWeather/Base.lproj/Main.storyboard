@@ -76,19 +76,25 @@
                                     <action selector="closeViewController" destination="e24-hU-7yy" eventType="touchUpInside" id="2yh-1n-DYR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday will be a hot day 🔥 dont forget to drink water 🍺" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w5-VZ-5fi">
-                                <rect key="frame" x="20" y="146" width="374" height="46.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w5-VZ-5fi">
+                                <rect key="frame" x="20" y="146" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vP6-3K-MLM">
+                                <rect key="frame" x="20" y="280" width="374" height="582"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jgw-Ss-Ax0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
                             <constraint firstItem="5w5-VZ-5fi" firstAttribute="centerX" secondItem="92f-3H-kg7" secondAttribute="centerX" id="1uV-16-dlu"/>
+                            <constraint firstItem="jgw-Ss-Ax0" firstAttribute="trailing" secondItem="vP6-3K-MLM" secondAttribute="trailing" constant="20" id="Ajf-Vk-N2s"/>
                             <constraint firstItem="5w5-VZ-5fi" firstAttribute="leading" secondItem="92f-3H-kg7" secondAttribute="leading" constant="20" id="CJx-8z-KWD"/>
                             <constraint firstItem="5w5-VZ-5fi" firstAttribute="top" secondItem="jgw-Ss-Ax0" secondAttribute="top" constant="102" id="KVo-Z9-XPs"/>
+                            <constraint firstItem="vP6-3K-MLM" firstAttribute="leading" secondItem="jgw-Ss-Ax0" secondAttribute="leading" constant="20" id="eBU-IA-LMX"/>
+                            <constraint firstItem="vP6-3K-MLM" firstAttribute="top" secondItem="5w5-VZ-5fi" secondAttribute="bottom" constant="87.5" id="gwh-vm-qTZ"/>
                             <constraint firstItem="JK1-DE-SDc" firstAttribute="top" secondItem="jgw-Ss-Ax0" secondAttribute="top" constant="20" id="mfQ-sL-aef"/>
                             <constraint firstAttribute="trailing" secondItem="5w5-VZ-5fi" secondAttribute="trailing" constant="20" id="mmR-cH-Z9i"/>
                             <constraint firstItem="jgw-Ss-Ax0" firstAttribute="trailing" secondItem="JK1-DE-SDc" secondAttribute="trailing" constant="20" id="pt3-7O-EqF"/>
@@ -96,6 +102,7 @@
                     </view>
                     <connections>
                         <outlet property="headerMessageLabel" destination="5w5-VZ-5fi" id="rUq-5d-0BC"/>
+                        <outlet property="stackView" destination="vP6-3K-MLM" id="Whs-e0-wA1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCd-G5-NiN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -106,6 +113,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

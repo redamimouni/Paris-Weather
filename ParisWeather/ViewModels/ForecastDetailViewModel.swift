@@ -37,11 +37,29 @@ class ForecastDetailViewModel: NSObject {
 }
 
 struct ForecastDetailModel: Equatable {
+    static func == (lhs: ForecastDetailModel, rhs: ForecastDetailModel) -> Bool {
+        return lhs.sunriseSunset == rhs.sunriseSunset && lhs.temperature == rhs.temperature
+    }
+    
     let headerMessage: String
+    let sunriseSunset: (sunrise: String, sunset: String)
+    let temperature: (day: String, min: String, max: String)
+    let pressureHumidity: (pressure: String, humidity: String)
+    let weather: (main: String, icon: String)
 }
 
-extension List {    
+extension List {
     func toForeCastDetailModel() -> ForecastDetailModel {
-        return ForecastDetailModel(headerMessage: "\(dt.timeIntervalToDayOfWeek()) will be a \(temp.day > 25 ? "Hot day 🔥" : "Cold day ❄️") dont forget to \(temp.day > 25 ? "drink water 🍺" : "eat your soup 🍵")")
+        return ForecastDetailModel(headerMessage: "\(dt.timeIntervalToDateFormat(dateFormat: "EEEE")) will be a \(temp.day > 25 ? "Hot day 🔥" : "Cold day ❄️") dont forget to \(temp.day > 25 ? "drink water 🍺" : "eat your soup 🍵")",
+                                   sunriseSunset: (sunrise: sunrise.timeIntervalToDateFormat(dateFormat: "h:mm a"),
+                                                   sunset: sunset.timeIntervalToDateFormat(dateFormat: "h:mm a")),
+                                   temperature: (day: "\(Int(temp.day)) C°",
+                                                 min: "\(Int(temp.min)) C°",
+                                                 max: "\(Int(temp.max)) C°"),
+                                   pressureHumidity: (pressure: "\(pressure) hPa",
+                                                      humidity: "\(humidity) %"),
+                                   weather: (main: weather.first?.main.rawValue ?? "Unknown",
+                                             icon: weather.first?.icon ?? "")
+        )
     }
 }

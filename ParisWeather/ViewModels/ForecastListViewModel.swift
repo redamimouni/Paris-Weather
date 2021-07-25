@@ -47,7 +47,7 @@ extension List {
     func toForecastListModel() -> ForecastListModel {
         return ForecastListModel(timeStamp: dt,
                                  temperature: String(format: "%.0f", temp.day),
-                                 day: dt.timeIntervalToDayOfWeek()
+                                 day: dt.timeIntervalToDateFormat(dateFormat: "EEEE")
         )
     }
 }

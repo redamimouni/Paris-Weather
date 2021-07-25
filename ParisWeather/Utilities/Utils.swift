@@ -5,15 +5,15 @@
 //  Created by reda.mimouni on 20/07/2021.
 //
 
-import Foundation
+import UIKit
 
 extension Int {
     
-    func timeIntervalToDayOfWeek() -> String {
+    func timeIntervalToDateFormat(dateFormat: String) -> String {
         let timeInterval = TimeInterval(self)
         let date = Date(timeIntervalSince1970: timeInterval)
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE"
+        formatter.dateFormat = dateFormat
         return formatter.string(from: date)
     }
 }
@@ -35,4 +35,17 @@ extension URLSession {
     }
 }
 
-
+extension UIImageView {
+    static func fetchImage(from urlString: String, completionHandler: @escaping (_ data: Data?) -> ()) {
+        let session = URLSession.shared
+        let url = URL(string: urlString)
+        let dataTask = session.dataTask(with: url!) { (data, response, error) in
+            if error != nil {
+                completionHandler(nil)
+            } else {
+                completionHandler(data)
+            }
+        }
+        dataTask.resume()
+    }
+}

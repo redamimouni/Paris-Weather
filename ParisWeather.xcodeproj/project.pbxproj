@@ -35,6 +35,10 @@
 		AA47AF5226AA045100D3129E /* ForecastDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF5126AA045100D3129E /* ForecastDetailViewController.swift */; };
 		AA47AF5726AA0AE500D3129E /* ForecastDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF5626AA0AE500D3129E /* ForecastDetailViewModel.swift */; };
 		AA47AF6426AC487600D3129E /* ForecastDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47AF6326AC487600D3129E /* ForecastDetailViewModelTest.swift */; };
+		AA979F7C26AC821000C10F5A /* SunriseSunsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA979F7B26AC821000C10F5A /* SunriseSunsetView.swift */; };
+		AA979F8126AD83D900C10F5A /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA979F8026AD83D900C10F5A /* TemperatureView.swift */; };
+		AA979F8626AD8A3100C10F5A /* PressureHumidityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA979F8526AD8A3100C10F5A /* PressureHumidityView.swift */; };
+		AA979F8B26AD8D6D00C10F5A /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA979F8A26AD8D6D00C10F5A /* WeatherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,10 @@
 		AA47AF5126AA045100D3129E /* ForecastDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailViewController.swift; sourceTree = "<group>"; };
 		AA47AF5626AA0AE500D3129E /* ForecastDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailViewModel.swift; sourceTree = "<group>"; };
 		AA47AF6326AC487600D3129E /* ForecastDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailViewModelTest.swift; sourceTree = "<group>"; };
+		AA979F7B26AC821000C10F5A /* SunriseSunsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunriseSunsetView.swift; sourceTree = "<group>"; };
+		AA979F8026AD83D900C10F5A /* TemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
+		AA979F8526AD8A3100C10F5A /* PressureHumidityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressureHumidityView.swift; sourceTree = "<group>"; };
+		AA979F8A26AD8D6D00C10F5A /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +240,10 @@
 			isa = PBXGroup;
 			children = (
 				AA47AF1B26A73F5C00D3129E /* ForecastTableViewCell.swift */,
+				AA979F7B26AC821000C10F5A /* SunriseSunsetView.swift */,
+				AA979F8026AD83D900C10F5A /* TemperatureView.swift */,
+				AA979F8526AD8A3100C10F5A /* PressureHumidityView.swift */,
+				AA979F8A26AD8D6D00C10F5A /* WeatherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -392,6 +404,10 @@
 				AA47AE69269EC90B00D3129E /* DailyForeCastServiceImpl.swift in Sources */,
 				AA47AEFF26A72DF400D3129E /* ForecastListViewModel.swift in Sources */,
 				AA47AE62269EC82B00D3129E /* DailyForeCastEntity.swift in Sources */,
+				AA979F7C26AC821000C10F5A /* SunriseSunsetView.swift in Sources */,
+				AA979F8B26AD8D6D00C10F5A /* WeatherView.swift in Sources */,
+				AA979F8126AD83D900C10F5A /* TemperatureView.swift in Sources */,
+				AA979F8626AD8A3100C10F5A /* PressureHumidityView.swift in Sources */,
 				AA47AF2126A73FF000D3129E /* ForecastTableViewDataSource.swift in Sources */,
 				AA47AE29269EC3AC00D3129E /* ForecastListViewController.swift in Sources */,
 				AA47AE25269EC3AC00D3129E /* AppDelegate.swift in Sources */,
