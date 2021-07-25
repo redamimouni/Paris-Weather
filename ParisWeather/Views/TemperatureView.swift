@@ -67,12 +67,15 @@ class TemperatureView: UIView {
                 
                 minLabel.topAnchor.constraint(equalTo: dayLabel.topAnchor),
                 minLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
-                minLabel.leadingAnchor.constraint(equalTo: dayLabel.leadingAnchor, constant: 10),
-                minLabel.trailingAnchor.constraint(equalTo: maxLabel.trailingAnchor, constant: 10),
+                minLabel.leadingAnchor.constraint(equalTo: dayLabel.trailingAnchor),
+                minLabel.trailingAnchor.constraint(equalTo: maxLabel.leadingAnchor),
                 
                 maxLabel.topAnchor.constraint(equalTo: dayLabel.topAnchor),
                 maxLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
-                maxLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
+                maxLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+                
+                dayLabel.widthAnchor.constraint(equalTo: minLabel.widthAnchor, multiplier: 1.0),
+                maxLabel.widthAnchor.constraint(equalTo: dayLabel.widthAnchor, multiplier: 1.0)
             ]
         )
     }

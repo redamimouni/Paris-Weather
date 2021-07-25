@@ -56,8 +56,9 @@ class SunriseSunsetView: UIView {
                 sunriseLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
                 sunsetLabel.topAnchor.constraint(equalTo: sunriseLabel.topAnchor),
                 sunsetLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
-                sunsetLabel.leadingAnchor.constraint(equalTo: sunriseLabel.leadingAnchor, constant: 10),
-                sunsetLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
+                sunsetLabel.leadingAnchor.constraint(equalTo: sunriseLabel.trailingAnchor, constant: 10),
+                sunsetLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+                sunsetLabel.widthAnchor.constraint(equalTo: sunriseLabel.widthAnchor, multiplier: 1.0)
             ]
         )
     }

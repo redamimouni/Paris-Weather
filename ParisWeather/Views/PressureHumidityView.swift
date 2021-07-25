@@ -54,9 +54,10 @@ class PressureHumidityView: UIView {
                 pressureLabel.topAnchor.constraint(equalTo: topAnchor),
                 pressureLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
                 pressureLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+                pressureLabel.widthAnchor.constraint(equalTo: humidityLabel.widthAnchor, multiplier: 1),
                 humidityLabel.topAnchor.constraint(equalTo: pressureLabel.topAnchor),
                 humidityLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
-                humidityLabel.leadingAnchor.constraint(equalTo: pressureLabel.leadingAnchor, constant: 10),
+                humidityLabel.leadingAnchor.constraint(equalTo: pressureLabel.trailingAnchor, constant: 10),
                 humidityLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
             ]
         )
